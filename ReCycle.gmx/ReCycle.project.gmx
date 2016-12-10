@@ -22,6 +22,9 @@
     <path>paths\path0</path>
     <path>paths\path1</path>
   </paths>
+  <fonts name="fonts">
+    <font>fonts\f_Default</font>
+  </fonts>
   <objects name="objects">
     <object>objects\o_TestCharacter</object>
     <object>objects\o_AiCharacter</object>

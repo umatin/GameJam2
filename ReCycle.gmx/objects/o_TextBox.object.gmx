@@ -92,6 +92,7 @@ if(textAtTop){
         1);
         
     draw_set_color(c_white);
+    draw_set_font(f_Default);
     
     draw_text_ext(padding * 2, 
         padding, 
@@ -103,16 +104,17 @@ if(textAtTop){
         0,
         window_get_width()/2, 
         window_get_height()-boxSize-padding,
-        4,
-        4,
+        2,
+        2,
         0,
         c_white,
         1);
         
     draw_set_color(c_white);
+    draw_set_font(f_Default);
     
     draw_text_ext(padding * 2, 
-        window_get_height()-boxSize-padding, 
+        window_get_height()-boxSize, 
         text, 
         textLineSeperation, 
         window_get_width()-padding);
