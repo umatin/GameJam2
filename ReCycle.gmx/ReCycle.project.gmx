@@ -31,13 +31,18 @@
     <object>objects\o_EButton</object>
     <object>objects\o_MainChar</object>
     <object>objects\Zeitung</object>
+    <object>objects\DoorStartZimmer</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\StartZimmer</room>
     <room>rooms\TestingRoom</room>
     <room>rooms\testingroom2</room>
+    <room>rooms\Wohnzimmer</room>
+    <room>rooms\Kueche</room>
+    <room>rooms\Treppenhaus</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
