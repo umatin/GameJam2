@@ -12,6 +12,7 @@
     <sprite>sprites\SpritesheetTest</sprite>
     <sprite>sprites\s_EButton</sprite>
     <sprite>sprites\s_Door</sprite>
+    <sprite>sprites\s_TextBox</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
