@@ -46,12 +46,14 @@
     <timeline>timelines\timeline1</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\StartZimmer</room>
+    <rooms name="RealGame">
+      <room>rooms\StartZimmer</room>
+      <room>rooms\Wohnzimmer</room>
+      <room>rooms\Kueche</room>
+      <room>rooms\Treppenhaus</room>
+    </rooms>
     <room>rooms\TestingRoom</room>
     <room>rooms\testingroom2</room>
-    <room>rooms\Wohnzimmer</room>
-    <room>rooms\Kueche</room>
-    <room>rooms\Treppenhaus</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
