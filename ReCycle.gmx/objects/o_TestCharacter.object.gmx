@@ -177,7 +177,7 @@ else if(self.currentSpriteImage != 1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
+            <string>image_index = self.currentSpriteImage;
 </string>
           </argument>
         </arguments>
