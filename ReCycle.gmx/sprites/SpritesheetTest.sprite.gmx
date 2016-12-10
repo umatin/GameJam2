@@ -27,5 +27,8 @@
     <frame index="4">images\SpritesheetTest_4.png</frame>
     <frame index="5">images\SpritesheetTest_5.png</frame>
     <frame index="6">images\SpritesheetTest_6.png</frame>
+    <frame index="7">images\SpritesheetTest_7.png</frame>
+    <frame index="8">images\SpritesheetTest_8.png</frame>
+    <frame index="9">images\SpritesheetTest_9.png</frame>
   </frames>
 </sprite>

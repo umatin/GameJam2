@@ -10,7 +10,6 @@
     <sprite>sprites\s_Object</sprite>
     <sprite>sprites\s_TestChar2</sprite>
     <sprite>sprites\SpritesheetTest</sprite>
-    <sprite>sprites\sprite4</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
