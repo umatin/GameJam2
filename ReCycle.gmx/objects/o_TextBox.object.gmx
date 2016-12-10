@@ -28,6 +28,7 @@
             <string>text = "";
 textAtTop = false;
 timeInstantiated = current_time;
+global.textBoxInstantiated = true;
 </string>
           </argument>
         </arguments>
@@ -90,7 +91,8 @@ if(textAtTop){
           <argument>
             <kind>1</kind>
             <string>if(current_time - timeInstantiated &gt; 1000){
-    self.instance_destroy();
+    global.textBoxInstantiated = false;
+    instance_destroy();
 }
 </string>
           </argument>
