@@ -2,7 +2,7 @@
 <object>
   <spriteName>SpritesheetTest</spriteName>
   <solid>-1</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -50,8 +50,9 @@ self.currentPath = path0;
 
 persistent = true;
 
-self.currentRoom = 1;
+self.currentRoom = Wohnzimmer;
 
+visible = false;
 </string>
           </argument>
         </arguments>

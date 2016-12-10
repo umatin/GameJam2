@@ -23,7 +23,7 @@
 {
     charMoving = true;
     pathPoint = 0;
-    currentRoom = 1;
+    currentRoom = Wohnzimmer;
     currentPath = path0;
     
     y = 100;

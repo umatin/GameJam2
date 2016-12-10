@@ -33,16 +33,20 @@
     <sprite>sprites\s_Bett</sprite>
     <sprite>sprites\s_Decke</sprite>
     <sprites name="DEBUG">
-      <sprite>sprites\s_Treppe</sprite>
+      <sprite>sprites\s_TreppeDEBUG</sprite>
       <sprite>sprites\s_Sprite0</sprite>
       <sprite>sprites\s_Object</sprite>
       <sprite>sprites\s_TestChar2</sprite>
       <sprite>sprites\s_Door</sprite>
     </sprites>
     <sprite>sprites\Helper</sprite>
+    <sprite>sprites\s_Treppe</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\StartRoom</background>
+    <background>background\StartRoom2</background>
+    <background>background\Start</background>
+    <background>background\StartRoom1</background>
+    <background>background\StartRoom12</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -62,6 +66,7 @@
     <object>objects\sprite_bed</object>
     <object>objects\sprite_decke</object>
     <object>objects\o_HelperObject</object>
+    <object>objects\o_mainMenuHandler</object>
     <objects name="Doors">
       <object>objects\o_DoorStartZimmer</object>
       <object>objects\o_DoorKueche</object>
@@ -77,6 +82,7 @@
     <timeline>timelines\timeline1</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\MainMenu</room>
     <rooms name="RealGame">
       <room>rooms\StartZimmer</room>
       <room>rooms\Wohnzimmer</room>
