@@ -3,6 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>Pixeled.ttf</name>
+      <exists>-1</exists>
+      <size>16400</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Pixeled.ttf</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -14,10 +33,10 @@
     <sprite>sprites\s_EButton</sprite>
     <sprite>sprites\s_Door</sprite>
     <sprite>sprites\sprite6</sprite>
-    <sprite>sprites\s_TextBox</sprite>
     <sprite>sprites\s_zeitung</sprite>
     <sprite>sprites\s_Bett</sprite>
     <sprite>sprites\s_Decke</sprite>
+    <sprite>sprites\s_TextBox</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -46,14 +65,14 @@
     <timeline>timelines\timeline1</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\TestingRoom</room>
+    <room>rooms\testingroom2</room>
     <rooms name="RealGame">
       <room>rooms\StartZimmer</room>
       <room>rooms\Wohnzimmer</room>
       <room>rooms\Kueche</room>
       <room>rooms\Treppenhaus</room>
     </rooms>
-    <room>rooms\TestingRoom</room>
-    <room>rooms\testingroom2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
