@@ -6,18 +6,20 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\s_Sprite0</sprite>
-    <sprite>sprites\s_Object</sprite>
-    <sprite>sprites\s_TestChar2</sprite>
     <sprite>sprites\SpritesheetTest</sprite>
     <sprite>sprites\s_MainChar</sprite>
     <sprite>sprites\s_EButton</sprite>
-    <sprite>sprites\s_Door</sprite>
-    <sprite>sprites\sprite6</sprite>
     <sprite>sprites\s_TextBox</sprite>
     <sprite>sprites\s_zeitung</sprite>
     <sprite>sprites\s_Bett</sprite>
     <sprite>sprites\s_Decke</sprite>
+    <sprites name="DEBUG">
+      <sprite>sprites\s_Treppe</sprite>
+      <sprite>sprites\s_Sprite0</sprite>
+      <sprite>sprites\s_Object</sprite>
+      <sprite>sprites\s_TestChar2</sprite>
+      <sprite>sprites\s_Door</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -39,7 +41,11 @@
     <object>objects\sprite_decke</object>
     <objects name="Doors">
       <object>objects\o_DoorStartZimmer</object>
+      <object>objects\o_DoorTreppenhaus</object>
       <object>objects\o_Door</object>
+      <object>objects\o_Treppe</object>
+      <object>objects\o_TreppeNachUnten</object>
+      <object>objects\o_TreppeNachOben</object>
     </objects>
   </objects>
   <timelines name="timelines">

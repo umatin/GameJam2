@@ -30,7 +30,7 @@ global.EButtonInstantiated = false
 
 global.PlayerChar = self;
 
-self.movementSpeed = 1.8;
+self.movementSpeed = 4;
 
 self.currentSpriteImage = 0;
 
