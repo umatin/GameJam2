@@ -30,6 +30,7 @@
 image_xscale = 2;
 image_yscale = 2;
 global.textBoxInstantiated = false;
+global.EButtonInstantiated = false
 
 global.PlayerChar = self;
 

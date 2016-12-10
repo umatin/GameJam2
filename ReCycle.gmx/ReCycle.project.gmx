@@ -10,6 +10,7 @@
     <sprite>sprites\s_Object</sprite>
     <sprite>sprites\s_TestChar2</sprite>
     <sprite>sprites\SpritesheetTest</sprite>
+    <sprite>sprites\s_EButton</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -18,6 +19,7 @@
     <object>objects\o_AiCharacter</object>
     <object>objects\o_InteractableObject</object>
     <object>objects\o_TextBox</object>
+    <object>objects\o_EButton</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
