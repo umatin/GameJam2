@@ -49,6 +49,8 @@ self.charMoving = true;
 self.destinX = 50;
 self.destinY = 50;
 
+self.pathPoint = 0;
+
 </string>
           </argument>
         </arguments>
@@ -71,7 +73,13 @@ self.destinY = 50;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(string(self.x) + " " + string(self.y));
+            <string>destinX = path_get_point_x (path0,pathPoint);
+destinY = path_get_point_y (path0,pathPoint);
+
+show_debug_message(string(self.x) + " " + string(self.y));
+show_debug_message("Destin" + string(destinX) + " " + string(destinY));
+
+
 if !(self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1)
 {
     if (self.x &lt; destinX)
@@ -97,7 +105,8 @@ else if !(self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1)
 
 if ((self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1) &amp;&amp; (self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1))
 {
-    self.charMoving = false;
+    //self.charMoving = false;
+    pathPoint ++;
 }
 
 
