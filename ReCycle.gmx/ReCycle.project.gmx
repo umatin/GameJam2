@@ -15,6 +15,7 @@
     <sprite>sprites\s_Door</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\s_TextBox</sprite>
+    <sprite>sprites\s_zeitung</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -29,6 +30,7 @@
     <object>objects\o_TextBox</object>
     <object>objects\o_EButton</object>
     <object>objects\o_MainChar</object>
+    <object>objects\Zeitung</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
