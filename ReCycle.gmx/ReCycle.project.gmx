@@ -14,6 +14,7 @@
   <backgrounds name="background"/>
   <paths name="paths">
     <path>paths\path0</path>
+    <path>paths\path1</path>
   </paths>
   <objects name="objects">
     <object>objects\o_TestCharacter</object>

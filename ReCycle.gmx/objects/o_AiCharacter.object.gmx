@@ -44,12 +44,15 @@ image_speed = 0;
 self.old_time = 0;
 
 self.charDirection = 1;
-self.charMoving = true;
+self.charMoving = false;
 
 self.destinX = 50;
 self.destinY = 50;
 
 self.pathPoint = 0;
+
+self.currentPath = path0;
+
 
 </string>
           </argument>
@@ -73,8 +76,8 @@ self.pathPoint = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>destinX = path_get_point_x (path0,pathPoint);
-destinY = path_get_point_y (path0,pathPoint);
+            <string>destinX = path_get_point_x (self.currentPath,pathPoint);
+destinY = path_get_point_y (self.currentPath,pathPoint);
 
 show_debug_message(string(self.x) + " " + string(self.y));
 show_debug_message("Destin" + string(destinX) + " " + string(destinY));
@@ -105,8 +108,12 @@ else if !(self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1)
 
 if ((self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1) &amp;&amp; (self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1))
 {
-    //self.charMoving = false;
     pathPoint ++;
+}
+
+if (path_get_number(self.currentPath) == pathPoint)
+{
+    self.charMoving = false;
 }
 
 
