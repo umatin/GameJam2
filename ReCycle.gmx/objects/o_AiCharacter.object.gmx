@@ -29,6 +29,7 @@
 
 image_xscale = 2;
 image_yscale = 2;
+
 global.textBoxInstantiated = false;
 
 
@@ -43,6 +44,11 @@ image_speed = 0;
 self.old_time = 0;
 
 self.charDirection = 1;
+self.charMoving = true;
+
+self.destinX = 50;
+self.destinY = 50;
+
 </string>
           </argument>
         </arguments>
@@ -65,86 +71,123 @@ self.charDirection = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (self.charDirection == 1)
+            <string>show_debug_message(string(self.x) + " " + string(self.y));
+if !(self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1)
 {
-    if (place_free(self.x - self.movementSpeed, self.y))
+    if (self.x &lt; destinX)
     {
-        self.x -= self.movementSpeed;
-        
-        if (current_time - old_time &gt; 300)
-        {
-            if (self.currentSpriteImage != 8)
-            {
-                self.currentSpriteImage = 8;
-            }
-            else if(self.currentSpriteImage != 9)
-            {
-                self.currentSpriteImage = 9;
-            }
-            self.old_time = current_time;
-        }
+        self.charDirection = 3;
+    }
+    else if (self.x &gt; destinX)
+    {
+        self.charDirection = 1;
     }
 }
-if (self.charDirection == 2)
+else if !(self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1)
 {
-    if (place_free(self.x + self.movementSpeed, self.y))
+    if (self.y &lt; destinY)
     {
-        self.x += self.movementSpeed;
-        
-        if (current_time - old_time &gt; 300)
+        self.charDirection = 2;
+    }
+    else if (self.y &gt; destinY)
+    {
+        self.charDirection = 0;
+    }
+}
+
+if ((self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1) &amp;&amp; (self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1))
+{
+    self.charMoving = false;
+}
+
+
+if (self.charMoving == true)
+{
+    if (self.charDirection == 1)
+    {
+        if (place_free(self.x - self.movementSpeed, self.y))
         {
-            if (self.currentSpriteImage != 3)
+            self.x -= self.movementSpeed;
+            
+            if (current_time - old_time &gt; 300)
             {
-                self.currentSpriteImage = 3;
+                if (self.currentSpriteImage != 8)
+                {
+                    self.currentSpriteImage = 8;
+                }
+                else if(self.currentSpriteImage != 9)
+                {
+                    self.currentSpriteImage = 9;
+                }
+                self.old_time = current_time;
             }
-            else if(self.currentSpriteImage != 4)
+        }
+    }
+    if (self.charDirection == 3)
+    {
+        if (place_free(self.x + self.movementSpeed, self.y))
+        {
+            self.x += self.movementSpeed;
+            
+            if (current_time - old_time &gt; 300)
             {
-                self.currentSpriteImage = 4;
+                if (self.currentSpriteImage != 3)
+                {
+                    self.currentSpriteImage = 3;
+                }
+                else if(self.currentSpriteImage != 4)
+                {
+                    self.currentSpriteImage = 4;
+                }
+                self.old_time = current_time;
             }
-            self.old_time = current_time;
+        }
+    }
+    
+    if (self.charDirection == 2)
+    {
+        if (place_free( self.x, self.y + self.movementSpeed))
+        {
+            self.y += self.movementSpeed;
+            if (current_time - old_time &gt; 300)
+            {
+                if (self.currentSpriteImage != 0)
+                {
+                    self.currentSpriteImage = 0;
+                }
+                else if(self.currentSpriteImage != 5)
+                {
+                    self.currentSpriteImage = 5;
+                }
+                self.old_time = current_time;
+            }
+        }
+    }
+    
+    if (self.charDirection == 0)
+    {
+        if (place_free(self.x, self.y - self.movementSpeed))
+        {
+            self.y -= self.movementSpeed;
+            if (current_time - old_time &gt; 300)
+            {
+                if (self.currentSpriteImage != 1)
+                {
+                    self.currentSpriteImage = 1;
+                }
+                else if(self.currentSpriteImage != 6)
+                {
+                    self.currentSpriteImage = 6;
+                }
+                self.old_time = current_time;
+            }
         }
     }
 }
 
-if (self.charDirection == 3)
-{
-    if (place_free( self.x, self.y + self.movementSpeed))
-    {
-        self.y += self.movementSpeed;
-        if (current_time - old_time &gt; 300)
-        {
-            if (self.currentSpriteImage != 0)
-            {
-                self.currentSpriteImage = 0;
-            }
-            else if(self.currentSpriteImage != 5)
-            {
-                self.currentSpriteImage = 5;
-            }
-            self.old_time = current_time;
-        }
-    }
-}
 
-if (self.charDirection == 4)
-{
-    if (place_free(self.x, self.y - self.movementSpeed))
-    {
-        self.y -= self.movementSpeed;
-        if (current_time - old_time &gt; 300)
-        {
-            if (self.currentSpriteImage != 1)
-            {
-                self.currentSpriteImage = 1;
-            }
-            else if(self.currentSpriteImage != 6)
-            {
-                self.currentSpriteImage = 6;
-            }
-            self.old_time = current_time;
-        }
-    }
-}
+
+
 </string>
           </argument>
         </arguments>
@@ -168,144 +211,6 @@ if (self.charDirection == 4)
           <argument>
             <kind>1</kind>
             <string>image_index = self.currentSpriteImage;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="87">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>self.currentSpriteImage = 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="83">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>self.currentSpriteImage = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="68">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>self.currentSpriteImage = 3
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="65">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>self.currentSpriteImage = 8;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="10" enumb="68">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>self.currentSpriteImage = 2;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="10" enumb="65">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>self.currentSpriteImage = 7;
 </string>
           </argument>
         </arguments>

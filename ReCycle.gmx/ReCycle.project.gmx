@@ -12,7 +12,9 @@
     <sprite>sprites\SpritesheetTest</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <objects name="objects">
     <object>objects\o_TestCharacter</object>
     <object>objects\o_AiCharacter</object>
