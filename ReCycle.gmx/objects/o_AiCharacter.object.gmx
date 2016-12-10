@@ -25,12 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>texture_set_interpolation(false);
-
-image_xscale = 2;
-image_yscale = 2;
-
-global.textBoxInstantiated = false;
+            <string>global.textBoxInstantiated = false;
 
 
 global.PlayerChar = self;
@@ -53,6 +48,7 @@ self.pathPoint = 0;
 
 self.currentPath = path0;
 
+persistent = true;
 
 </string>
           </argument>
@@ -227,6 +223,10 @@ if (self.charMoving == true)
           <argument>
             <kind>1</kind>
             <string>image_index = self.currentSpriteImage;
+texture_set_interpolation(false);
+
+image_xscale = 3;
+image_yscale = 3;
 </string>
           </argument>
         </arguments>
