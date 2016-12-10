@@ -53,7 +53,9 @@ image_yscale = 2;
             <kind>1</kind>
             <string>if (distance_to_object(global.PlayerChar) &lt; 3)
 {
-    show_debug_message("Yo u picked up Sth");
+    inst = instance_create(0,0,o_TextBox);
+    inst.text = "Waddup Yo";
+    
 }
 
 </string>
