@@ -79,6 +79,8 @@ padding = 30;
 textLineSeperation = 10;
 
 texture_set_interpolation(false);
+font_add('Modern', 12, true, false, 32, 128);
+draw_set_font(f_Default);
 
 if(textAtTop){
     draw_sprite_ext(s_TextBox,
@@ -92,7 +94,6 @@ if(textAtTop){
         1);
         
     draw_set_color(c_white);
-    draw_set_font(f_Default);
     
     draw_text_ext(padding * 2, 
         padding, 
@@ -111,7 +112,6 @@ if(textAtTop){
         1);
         
     draw_set_color(c_white);
-    draw_set_font(f_Default);
     
     draw_text_ext(padding * 2, 
         window_get_height()-boxSize, 
