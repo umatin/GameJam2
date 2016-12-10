@@ -11,13 +11,18 @@
     <sprite>sprites\s_TestChar2</sprite>
     <sprite>sprites\SpritesheetTest</sprite>
     <sprite>sprites\s_EButton</sprite>
+    <sprite>sprites\s_Door</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+    <path>paths\path1</path>
+  </paths>
   <objects name="objects">
     <object>objects\o_TestCharacter</object>
     <object>objects\o_AiCharacter</object>
     <object>objects\o_InteractableObject</object>
+    <object>objects\o_Door</object>
     <object>objects\o_TextBox</object>
     <object>objects\o_EButton</object>
   </objects>

@@ -10,13 +10,20 @@
   <persistent>0</persistent>
   <colour>8421631</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>///Timeline Testing
+with (Saman)
+{
+    timeline_index = timeline1;
+    timeline_position = 0;
+    timeline_running = true;
+    timeline_loop = false;
+}</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1008</w>
+    <w>984</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -56,7 +63,8 @@
     <instance objName="o_InteractableObject" x="288" y="192" name="inst_D5AAA1CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_InteractableObject" x="192" y="192" name="inst_50153476" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_InteractableObject" x="192" y="64" name="inst_F1AAFAE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_AiCharacter" x="256" y="160" name="inst_A7D68980" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_AiCharacter" x="256" y="160" name="Saman" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_Door" x="64" y="192" name="inst_A817E7CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
