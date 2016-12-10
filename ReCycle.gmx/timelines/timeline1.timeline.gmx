@@ -19,13 +19,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with (Saman)
+            <string>with (o_AiCharacter)
 {
     charMoving = true;
     pathPoint = 0;
-    
+    currentRoom = 1;
     currentPath = path0;
+    
+    y = 100;
+    x = 100;
 }
+
+show_debug_message("100");
 </string>
           </argument>
         </arguments>
@@ -33,7 +38,7 @@
     </event>
   </entry>
   <entry>
-    <step>800</step>
+    <step>1600</step>
     <event>
       <action>
         <libid>1</libid>
@@ -51,10 +56,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>charMoving = true;
-pathPoint = 0;
+            <string>with (o_AiCharacter)
+{
+    charMoving = true;
+    pathPoint = 0;
+    currentRoom = Kueche;
+    currentPath = path1;
+    y = 220;
+    x = 20;
+}
 
-currentPath = path1;
+show_debug_message("1600");
 </string>
           </argument>
         </arguments>

@@ -39,8 +39,11 @@
       <sprite>sprites\s_TestChar2</sprite>
       <sprite>sprites\s_Door</sprite>
     </sprites>
+    <sprite>sprites\Helper</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\StartRoom</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
     <path>paths\path1</path>
@@ -58,8 +61,11 @@
     <object>objects\Zeitung</object>
     <object>objects\sprite_bed</object>
     <object>objects\sprite_decke</object>
+    <object>objects\o_HelperObject</object>
     <objects name="Doors">
       <object>objects\o_DoorStartZimmer</object>
+      <object>objects\o_DoorKueche</object>
+      <object>objects\o_DoorWohnzimmer</object>
       <object>objects\o_DoorTreppenhaus</object>
       <object>objects\o_Door</object>
       <object>objects\o_Treppe</object>

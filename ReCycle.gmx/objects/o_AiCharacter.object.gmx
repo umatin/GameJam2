@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>global.textBoxInstantiated = false;
 
-
 global.PlayerChar = self;
 
 self.movementSpeed = 1;
@@ -39,6 +38,7 @@ image_speed = 0;
 self.old_time = 0;
 
 self.charDirection = 1;
+
 self.charMoving = false;
 
 self.destinX = 50;
@@ -49,6 +49,8 @@ self.pathPoint = 0;
 self.currentPath = path0;
 
 persistent = true;
+
+self.currentRoom = 1;
 
 </string>
           </argument>
@@ -72,131 +74,139 @@ persistent = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>destinX = path_get_point_x (self.currentPath,pathPoint);
-destinY = path_get_point_y (self.currentPath,pathPoint);
-
-//show_debug_message(string(self.x) + " " + string(self.y));
-//show_debug_message("Destin" + string(destinX) + " " + string(destinY));
-
-
-if !(self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1)
+            <string>if (currentRoom == room)
 {
-    if (self.x &lt; destinX)
+    visible = true;
+    
+    destinX = path_get_point_x (self.currentPath,pathPoint);
+    destinY = path_get_point_y (self.currentPath,pathPoint);
+    
+    show_debug_message(string(self.x) + " " + string(self.y));
+    show_debug_message("Destin" + string(destinX) + " " + string(destinY));
+    
+    
+    if !(self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1)
     {
-        self.charDirection = 3;
-    }
-    else if (self.x &gt; destinX)
-    {
-        self.charDirection = 1;
-    }
-}
-else if !(self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1)
-{
-    if (self.y &lt; destinY)
-    {
-        self.charDirection = 2;
-    }
-    else if (self.y &gt; destinY)
-    {
-        self.charDirection = 0;
-    }
-}
-
-if ((self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1) &amp;&amp; (self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1))
-{
-    pathPoint ++;
-}
-
-if (path_get_number(self.currentPath) == pathPoint)
-{
-    self.charMoving = false;
-}
-
-
-if (self.charMoving == true)
-{
-    if (self.charDirection == 1)
-    {
-        if (place_free(self.x - self.movementSpeed, self.y))
+        if (self.x &lt; destinX)
         {
-            self.x -= self.movementSpeed;
-            
-            if (current_time - old_time &gt; 300)
-            {
-                if (self.currentSpriteImage != 8)
-                {
-                    self.currentSpriteImage = 8;
-                }
-                else if(self.currentSpriteImage != 9)
-                {
-                    self.currentSpriteImage = 9;
-                }
-                self.old_time = current_time;
-            }
+            self.charDirection = 3;
+        }
+        else if (self.x &gt; destinX)
+        {
+            self.charDirection = 1;
         }
     }
-    if (self.charDirection == 3)
+    else if !(self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1)
     {
-        if (place_free(self.x + self.movementSpeed, self.y))
+        if (self.y &lt; destinY)
         {
-            self.x += self.movementSpeed;
-            
-            if (current_time - old_time &gt; 300)
-            {
-                if (self.currentSpriteImage != 3)
-                {
-                    self.currentSpriteImage = 3;
-                }
-                else if(self.currentSpriteImage != 4)
-                {
-                    self.currentSpriteImage = 4;
-                }
-                self.old_time = current_time;
-            }
+            self.charDirection = 2;
+        }
+        else if (self.y &gt; destinY)
+        {
+            self.charDirection = 0;
         }
     }
     
-    if (self.charDirection == 2)
+    if ((self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1) &amp;&amp; (self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1))
     {
-        if (place_free( self.x, self.y + self.movementSpeed))
-        {
-            self.y += self.movementSpeed;
-            if (current_time - old_time &gt; 300)
-            {
-                if (self.currentSpriteImage != 0)
-                {
-                    self.currentSpriteImage = 0;
-                }
-                else if(self.currentSpriteImage != 5)
-                {
-                    self.currentSpriteImage = 5;
-                }
-                self.old_time = current_time;
-            }
-        }
+        pathPoint ++;
     }
     
-    if (self.charDirection == 0)
+    if (path_get_number(self.currentPath) == pathPoint)
     {
-        if (place_free(self.x, self.y - self.movementSpeed))
+        self.charMoving = false;
+    }
+    
+    
+    if (self.charMoving == true)
+    {
+        if (self.charDirection == 1)
         {
-            self.y -= self.movementSpeed;
-            if (current_time - old_time &gt; 300)
+            if (place_free(self.x - self.movementSpeed, self.y))
             {
-                if (self.currentSpriteImage != 1)
+                self.x -= self.movementSpeed;
+                
+                if (current_time - old_time &gt; 300)
                 {
-                    self.currentSpriteImage = 1;
+                    if (self.currentSpriteImage != 8)
+                    {
+                        self.currentSpriteImage = 8;
+                    }
+                    else if(self.currentSpriteImage != 9)
+                    {
+                        self.currentSpriteImage = 9;
+                    }
+                    self.old_time = current_time;
                 }
-                else if(self.currentSpriteImage != 6)
+            }
+        }
+        if (self.charDirection == 3)
+        {
+            if (place_free(self.x + self.movementSpeed, self.y))
+            {
+                self.x += self.movementSpeed;
+                
+                if (current_time - old_time &gt; 300)
                 {
-                    self.currentSpriteImage = 6;
+                    if (self.currentSpriteImage != 3)
+                    {
+                        self.currentSpriteImage = 3;
+                    }
+                    else if(self.currentSpriteImage != 4)
+                    {
+                        self.currentSpriteImage = 4;
+                    }
+                    self.old_time = current_time;
                 }
-                self.old_time = current_time;
+            }
+        }
+        
+        if (self.charDirection == 2)
+        {
+            if (place_free( self.x, self.y + self.movementSpeed))
+            {
+                self.y += self.movementSpeed;
+                if (current_time - old_time &gt; 300)
+                {
+                    if (self.currentSpriteImage != 0)
+                    {
+                        self.currentSpriteImage = 0;
+                    }
+                    else if(self.currentSpriteImage != 5)
+                    {
+                        self.currentSpriteImage = 5;
+                    }
+                    self.old_time = current_time;
+                }
+            }
+        }
+        
+        if (self.charDirection == 0)
+        {
+            if (place_free(self.x, self.y - self.movementSpeed))
+            {
+                self.y -= self.movementSpeed;
+                if (current_time - old_time &gt; 300)
+                {
+                    if (self.currentSpriteImage != 1)
+                    {
+                        self.currentSpriteImage = 1;
+                    }
+                    else if(self.currentSpriteImage != 6)
+                    {
+                        self.currentSpriteImage = 6;
+                    }
+                    self.old_time = current_time;
+                }
             }
         }
     }
 }
-
+else
+{
+    visible = false;
+}
 
 
 

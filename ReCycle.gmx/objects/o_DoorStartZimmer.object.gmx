@@ -33,14 +33,6 @@ with (MainCharacter)
     x = 20;
     
 }
-
-with (Saman)
-{
-    x = -100;
-    y = -100;
-    visible = false;
-    solid = false;
-}
 </string>
           </argument>
         </arguments>
