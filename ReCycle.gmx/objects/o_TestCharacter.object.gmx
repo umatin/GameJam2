@@ -35,11 +35,13 @@ image_yscale = 2;
 
 global.PlayerChar = self;
 
-self.movementSpeed = 1.1;
+self.movementSpeed = 1;
 
 self.currentSpriteImage = 0;
 
 image_speed = 0;
+
+self.old_time = 0;
 </string>
           </argument>
         </arguments>
@@ -66,6 +68,19 @@ image_speed = 0;
 {
     self.y -= self.movementSpeed;
 }
+
+if (current_time - old_time &gt; 300)
+{
+    if (self.currentSpriteImage != 0)
+    {
+        self.currentSpriteImage = 0;
+    }
+    else if(self.currentSpriteImage != 1)
+    {
+        self.currentSpriteImage = 1;
+    }
+    self.old_time = current_time;
+}
 </string>
           </argument>
         </arguments>
@@ -91,6 +106,19 @@ image_speed = 0;
             <string>if (place_free( self.x, self.y + self.movementSpeed))
 {
     self.y += self.movementSpeed;
+}
+
+if (current_time - old_time &gt; 300)
+{
+    if (self.currentSpriteImage != 0)
+    {
+        self.currentSpriteImage = 0;
+    }
+    else if(self.currentSpriteImage != 1)
+    {
+        self.currentSpriteImage = 1;
+    }
+    self.old_time = current_time;
 }
 </string>
           </argument>
@@ -119,6 +147,19 @@ if (place_free(self.x + self.movementSpeed, self.y))
 {
     self.x += self.movementSpeed;
 }
+
+if (current_time - old_time &gt; 300)
+{
+    if (self.currentSpriteImage != 0)
+    {
+        self.currentSpriteImage = 0;
+    }
+    else if(self.currentSpriteImage != 1)
+    {
+        self.currentSpriteImage = 1;
+    }
+    self.old_time = current_time;
+}
 </string>
           </argument>
         </arguments>
@@ -146,14 +187,20 @@ if (place_free(self.x + self.movementSpeed, self.y))
     self.x -= self.movementSpeed;
 }
 
-if (self.currentSpriteImage != 0)
+
+if (current_time - old_time &gt; 300)
 {
-    self.currentSpriteImage = 0;
+    if (self.currentSpriteImage != 0)
+    {
+        self.currentSpriteImage = 0;
+    }
+    else if(self.currentSpriteImage != 1)
+    {
+        self.currentSpriteImage = 1;
+    }
+    self.old_time = current_time;
 }
-else if(self.currentSpriteImage != 1)
-{
-    self.currentSpriteImage = 1;
-}
+
 
 </string>
           </argument>
