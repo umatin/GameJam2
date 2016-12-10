@@ -16,6 +16,8 @@
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\s_TextBox</sprite>
     <sprite>sprites\s_zeitung</sprite>
+    <sprite>sprites\s_Bett</sprite>
+    <sprite>sprites\s_Decke</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -29,12 +31,16 @@
     <object>objects\o_TestCharacter</object>
     <object>objects\o_AiCharacter</object>
     <object>objects\o_InteractableObject</object>
-    <object>objects\o_Door</object>
     <object>objects\o_TextBox</object>
     <object>objects\o_EButton</object>
     <object>objects\o_MainChar</object>
     <object>objects\Zeitung</object>
-    <object>objects\DoorStartZimmer</object>
+    <object>objects\sprite_bed</object>
+    <object>objects\sprite_decke</object>
+    <objects name="Doors">
+      <object>objects\o_DoorStartZimmer</object>
+      <object>objects\o_Door</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
