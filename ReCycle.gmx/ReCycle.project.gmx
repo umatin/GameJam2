@@ -15,9 +15,13 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\o_TestCharacter</object>
+    <object>objects\o_AiCharacter</object>
     <object>objects\o_InteractableObject</object>
     <object>objects\o_TextBox</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\timeline1</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\TestingRoom</room>
   </rooms>
