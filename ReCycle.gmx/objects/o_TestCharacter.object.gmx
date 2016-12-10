@@ -34,7 +34,7 @@ global.EButtonInstantiated = false
 
 global.PlayerChar = self;
 
-self.movementSpeed = 1;
+self.movementSpeed = 1.8;
 
 self.currentSpriteImage = 0;
 
@@ -43,6 +43,8 @@ image_speed = 0;
 self.old_time = 0;
 
 self.currentPlaceInAnim = 0;
+
+depth = -9999;
 </string>
           </argument>
         </arguments>
@@ -71,7 +73,7 @@ self.currentPlaceInAnim = 0;
     
         self.y -= self.movementSpeed;
         
-        if (current_time - old_time &gt; 300) {
+        if (current_time - old_time &gt; 250) {
         
             if (self.currentSpriteImage != 1) {
             
@@ -116,7 +118,7 @@ self.currentPlaceInAnim = 0;
     
         self.y += self.movementSpeed;
         
-        if (current_time - old_time &gt; 300) {
+        if (current_time - old_time &gt; 250) {
         
             if (self.currentSpriteImage != 0) {
             
@@ -161,7 +163,7 @@ self.currentPlaceInAnim = 0;
     
         self.x += self.movementSpeed;
 
-        if (current_time - old_time &gt; 300) {
+        if (current_time - old_time &gt; 200) {
         
             if (self.currentPlaceInAnim == 0) {
                 
@@ -215,7 +217,7 @@ self.currentPlaceInAnim = 0;
     
         self.x -= self.movementSpeed;
         
-        if (current_time - old_time &gt; 300) {
+        if (current_time - old_time &gt; 200) {
             show_debug_message(string (self.currentPlaceInAnim) );
             
             if (self.currentPlaceInAnim == 0) {

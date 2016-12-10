@@ -10,6 +10,7 @@
     <sprite>sprites\s_Object</sprite>
     <sprite>sprites\s_TestChar2</sprite>
     <sprite>sprites\SpritesheetTest</sprite>
+    <sprite>sprites\s_MainChar</sprite>
     <sprite>sprites\s_EButton</sprite>
     <sprite>sprites\s_Door</sprite>
     <sprite>sprites\s_TextBox</sprite>
@@ -27,6 +28,7 @@
     <object>objects\o_Door</object>
     <object>objects\o_TextBox</object>
     <object>objects\o_EButton</object>
+    <object>objects\o_MainChar</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
