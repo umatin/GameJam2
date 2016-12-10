@@ -41,6 +41,8 @@ self.currentSpriteImage = 0;
 image_speed = 0;
 
 self.old_time = 0;
+
+self.currentPlaceInAnim = 0;
 </string>
           </argument>
         </arguments>
@@ -161,18 +163,27 @@ self.old_time = 0;
 
         if (current_time - old_time &gt; 300) {
         
-            if (self.currentSpriteImage != 3) {
-            
+            if (self.currentPlaceInAnim == 0) {
+                
                 self.currentSpriteImage = 3;
-                
-            } else if (self.currentSpriteImage != 4) {
+            }
+            else if (self.currentPlaceInAnim == 1) {
             
-                self.currentSpriteImage = 4;
-                
+                self.currentSpriteImage = 2;
+            }
+            else if (self.currentPlaceInAnim == 2) {
+            
+                self.currentSpriteImage = 4;    
+            }
+            else if (self.currentPlaceInAnim == 3) {
+            
+                self.currentSpriteImage = 2;
             }
             
             self.old_time = current_time;
-            
+                        
+            self.currentPlaceInAnim ++;
+            self.currentPlaceInAnim = self.currentPlaceInAnim % 4;
         }
     }
 }
@@ -205,19 +216,29 @@ self.old_time = 0;
         self.x -= self.movementSpeed;
         
         if (current_time - old_time &gt; 300) {
-        
-            if (self.currentSpriteImage != 8) {
+            show_debug_message(string (self.currentPlaceInAnim) );
             
+            if (self.currentPlaceInAnim == 0) {
+                
                 self.currentSpriteImage = 8;
                 
-            } else if (self.currentSpriteImage != 9) {
+            } else if (self.currentPlaceInAnim == 1) {
             
-                self.currentSpriteImage = 9;
-                
+                self.currentSpriteImage = 7;    
+            }
+            else if (self.currentPlaceInAnim == 2) {
+            
+                self.currentSpriteImage = 9;    
+            }
+            else if (self.currentPlaceInAnim == 3) {
+            
+                self.currentSpriteImage = 7;    
             }
             
             self.old_time = current_time;
             
+            self.currentPlaceInAnim ++;
+            self.currentPlaceInAnim = self.currentPlaceInAnim % 4;
         }
     }
 }
@@ -355,6 +376,52 @@ self.old_time = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="10" enumb="87">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>self.old_time = 300;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="83">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>self.old_time = 300;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="10" enumb="68">
       <action>
         <libid>1</libid>
@@ -373,6 +440,7 @@ self.old_time = 0;
           <argument>
             <kind>1</kind>
             <string>self.currentSpriteImage = 2;
+self.old_time = 300;
 </string>
           </argument>
         </arguments>
@@ -396,6 +464,8 @@ self.old_time = 0;
           <argument>
             <kind>1</kind>
             <string>self.currentSpriteImage = 7;
+self.old_time = 300;
+
 </string>
           </argument>
         </arguments>

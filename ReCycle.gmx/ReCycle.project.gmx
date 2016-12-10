@@ -12,6 +12,7 @@
     <sprite>sprites\SpritesheetTest</sprite>
     <sprite>sprites\s_EButton</sprite>
     <sprite>sprites\s_Door</sprite>
+    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -31,6 +32,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\TestingRoom</room>
+    <room>rooms\testingroom2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
