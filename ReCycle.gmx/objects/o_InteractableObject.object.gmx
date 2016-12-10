@@ -81,7 +81,7 @@ texture_set_interpolation(false);
 {
     if(global.textBoxInstantiated == false){
         inst = instance_create(0,0,o_TextBox);
-        inst.text = "Waddup Yo";
+        inst.text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
     }
 }
 

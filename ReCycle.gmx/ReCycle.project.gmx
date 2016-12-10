@@ -28,12 +28,10 @@
     <sprite>sprites\SpritesheetTest</sprite>
     <sprite>sprites\s_MainChar</sprite>
     <sprite>sprites\s_EButton</sprite>
-
     <sprite>sprites\s_TextBox</sprite>
     <sprite>sprites\s_zeitung</sprite>
     <sprite>sprites\s_Bett</sprite>
     <sprite>sprites\s_Decke</sprite>
-
     <sprites name="DEBUG">
       <sprite>sprites\s_Treppe</sprite>
       <sprite>sprites\s_Sprite0</sprite>
