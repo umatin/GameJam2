@@ -10,6 +10,7 @@
     <sprite>sprites\s_Object</sprite>
     <sprite>sprites\s_TestChar2</sprite>
     <sprite>sprites\SpritesheetTest</sprite>
+    <sprite>sprites\s_Door</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -20,6 +21,7 @@
     <object>objects\o_TestCharacter</object>
     <object>objects\o_AiCharacter</object>
     <object>objects\o_InteractableObject</object>
+    <object>objects\o_Door</object>
     <object>objects\o_TextBox</object>
   </objects>
   <timelines name="timelines">
