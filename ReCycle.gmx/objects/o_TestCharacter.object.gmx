@@ -31,7 +31,6 @@ image_xscale = 2;
 image_yscale = 2;
 global.textBoxInstantiated = false;
 
-
 global.PlayerChar = self;
 
 self.movementSpeed = 1;
@@ -63,24 +62,29 @@ self.old_time = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_free(self.x, self.y - self.movementSpeed))
-{
-    self.y -= self.movementSpeed;
-    if (current_time - old_time &gt; 300)
-    {
-        if (self.currentSpriteImage != 1)
-        {
-            self.currentSpriteImage = 1;
+            <string>if (global.textBoxInstantiated == false) {
+
+    if (place_free(self.x, self.y - self.movementSpeed)) {
+    
+        self.y -= self.movementSpeed;
+        
+        if (current_time - old_time &gt; 300) {
+        
+            if (self.currentSpriteImage != 1) {
+            
+                self.currentSpriteImage = 1;
+                
+            } else if (self.currentSpriteImage != 6) {
+            
+                self.currentSpriteImage = 6;
+                
+            }
+            
+            self.old_time = current_time;
+            
         }
-        else if(self.currentSpriteImage != 6)
-        {
-            self.currentSpriteImage = 6;
-        }
-        self.old_time = current_time;
     }
 }
-
-
 </string>
           </argument>
         </arguments>
@@ -103,24 +107,29 @@ self.old_time = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_free( self.x, self.y + self.movementSpeed))
-{
-    self.y += self.movementSpeed;
-    if (current_time - old_time &gt; 300)
-    {
-        if (self.currentSpriteImage != 0)
-        {
-            self.currentSpriteImage = 0;
+            <string>if (global.textBoxInstantiated == false) {
+
+    if (place_free(self.x, self.y + self.movementSpeed)) {
+    
+        self.y += self.movementSpeed;
+        
+        if (current_time - old_time &gt; 300) {
+        
+            if (self.currentSpriteImage != 0) {
+            
+                self.currentSpriteImage = 0;
+                
+            } else if (self.currentSpriteImage != 5) {
+            
+                self.currentSpriteImage = 5;
+                
+            }
+            
+            self.old_time = current_time;
+            
         }
-        else if(self.currentSpriteImage != 5)
-        {
-            self.currentSpriteImage = 5;
-        }
-        self.old_time = current_time;
     }
 }
-
-
 </string>
           </argument>
         </arguments>
@@ -143,26 +152,29 @@ self.old_time = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (place_free(self.x + self.movementSpeed, self.y))
-{
-    self.x += self.movementSpeed;
+            <string>if (global.textBoxInstantiated == false) {
+
+    if (place_free(self.x + self.movementSpeed, self.y)) {
     
-    if (current_time - old_time &gt; 300)
-    {
-        if (self.currentSpriteImage != 3)
-        {
-            self.currentSpriteImage = 3;
+        self.x += self.movementSpeed;
+
+        if (current_time - old_time &gt; 300) {
+        
+            if (self.currentSpriteImage != 3) {
+            
+                self.currentSpriteImage = 3;
+                
+            } else if (self.currentSpriteImage != 4) {
+            
+                self.currentSpriteImage = 4;
+                
+            }
+            
+            self.old_time = current_time;
+            
         }
-        else if(self.currentSpriteImage != 4)
-        {
-            self.currentSpriteImage = 4;
-        }
-        self.old_time = current_time;
     }
 }
-
-
 </string>
           </argument>
         </arguments>
@@ -185,28 +197,29 @@ if (place_free(self.x + self.movementSpeed, self.y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_free(self.x - self.movementSpeed, self.y))
-{
-    self.x -= self.movementSpeed;
+            <string>if (global.textBoxInstantiated == false) {
+
+    if (place_free(self.x - self.movementSpeed, self.y)) {
     
-    if (current_time - old_time &gt; 300)
-    {
-        if (self.currentSpriteImage != 8)
-        {
-            self.currentSpriteImage = 8;
+        self.x -= self.movementSpeed;
+        
+        if (current_time - old_time &gt; 300) {
+        
+            if (self.currentSpriteImage != 8) {
+            
+                self.currentSpriteImage = 8;
+                
+            } else if (self.currentSpriteImage != 9) {
+            
+                self.currentSpriteImage = 9;
+                
+            }
+            
+            self.old_time = current_time;
+            
         }
-        else if(self.currentSpriteImage != 9)
-        {
-            self.currentSpriteImage = 9;
-        }
-        self.old_time = current_time;
     }
-
 }
-
-
-
-
 </string>
           </argument>
         </arguments>
@@ -252,7 +265,12 @@ if (place_free(self.x + self.movementSpeed, self.y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.currentSpriteImage = 1;
+            <string>if (global.textBoxInstantiated == false &amp;&amp;
+    !keyboard_check(ord('A')) &amp;&amp;
+    !keyboard_check(ord('S')) &amp;&amp;
+    !keyboard_check(ord('D'))) {
+    self.currentSpriteImage = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -275,7 +293,12 @@ if (place_free(self.x + self.movementSpeed, self.y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.currentSpriteImage = 0;
+            <string>if (global.textBoxInstantiated == false &amp;&amp;
+    !keyboard_check(ord('W')) &amp;&amp;
+    !keyboard_check(ord('A')) &amp;&amp;
+    !keyboard_check(ord('D'))) {
+    self.currentSpriteImage = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -298,7 +321,9 @@ if (place_free(self.x + self.movementSpeed, self.y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.currentSpriteImage = 3
+            <string>if (global.textBoxInstantiated == false) {
+    self.currentSpriteImage = 3;
+}
 </string>
           </argument>
         </arguments>
@@ -321,7 +346,9 @@ if (place_free(self.x + self.movementSpeed, self.y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.currentSpriteImage = 8;
+            <string>if (global.textBoxInstantiated == false) {
+    self.currentSpriteImage = 8;
+}
 </string>
           </argument>
         </arguments>
