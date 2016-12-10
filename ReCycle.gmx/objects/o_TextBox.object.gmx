@@ -86,16 +86,16 @@ if(textAtTop){
     draw_sprite_ext(s_TextBox,
         0,
         window_get_width()/2, 
-        30,
-        2,
-        2,
+        25,
+        3,
+        3,
         0,
         c_white,
         1);
         
     draw_set_color(c_white);
     
-    draw_text_ext(30+padding, 
+    draw_text_ext(25+padding, 
         padding, 
         text, 
         textLineSeperation, 
@@ -104,17 +104,17 @@ if(textAtTop){
     draw_sprite_ext(s_TextBox,
         0,
         window_get_width()/2, 
-        window_get_height()-boxSize-30,
-        2,
-        2,
+        window_get_height()-boxSize-25,
+        3,
+        3,
         0,
         c_white,
         1);
         
     draw_set_color(c_white);
     
-    draw_text_ext(30+padding, 
-        window_get_height()-boxSize-30+padding, 
+    draw_text_ext(25+padding, 
+        window_get_height()-boxSize-25+padding, 
         text, 
         textLineSeperation, 
         window_get_width()- 10);
