@@ -85,15 +85,15 @@ if(textAtTop){
         0,
         padding, 
         padding,
-        2,
-        2,
+        4,
+        4,
         0,
         c_white,
         1);
         
     draw_set_color(c_white);
     
-    draw_text_ext(padding, 
+    draw_text_ext(padding * 2, 
         padding, 
         text, 
         textLineSeperation, 
@@ -103,15 +103,15 @@ if(textAtTop){
         0,
         padding, 
         window_get_height()-boxSize-padding,
-        2,
-        2,
+        4,
+        4,
         0,
         c_white,
         1);
         
     draw_set_color(c_white);
     
-    draw_text_ext(padding, 
+    draw_text_ext(padding * 2, 
         window_get_height()-boxSize-padding, 
         text, 
         textLineSeperation, 
