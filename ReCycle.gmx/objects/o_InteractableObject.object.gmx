@@ -81,7 +81,7 @@ texture_set_interpolation(false);
 {
     if(global.textBoxInstantiated == false){
         inst = instance_create(0,0,o_TextBox);
-        inst.text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        inst.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sagittis lorem. Etiam a nunc mi.";
     }
 }
 

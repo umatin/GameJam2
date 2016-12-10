@@ -29,7 +29,7 @@
 textAtTop = false;
 timeInstantiated = current_time;
 global.textBoxInstantiated = true;
-f = font_add('Pixeled.ttf', 14, false, false, 32, 128);
+f = font_add('default.ttf', 20, false, false, 32, 128);
 </string>
           </argument>
         </arguments>
@@ -76,8 +76,9 @@ f = font_add('Pixeled.ttf', 14, false, false, 32, 128);
           <argument>
             <kind>1</kind>
             <string>boxSize = 135;
-padding = 30;
-textLineSeperation = 25;
+paddingText = 32;
+paddingBox = 25;
+textLineSeperation = 24;
 
 texture_set_interpolation(false);
 draw_set_font(f);
@@ -87,7 +88,7 @@ if (textAtTop) {
     draw_sprite_ext(s_TextBox,
         0,
         window_get_width() / 2,
-        25,
+        paddingBox,
         3,
         3,
         0,
@@ -96,18 +97,18 @@ if (textAtTop) {
 
     draw_set_color(c_white);
 
-    draw_text_ext(25 + padding,
-        padding,
+    draw_text_ext(paddingBox + paddingText,
+        paddingText,
         text,
         textLineSeperation,
-        window_get_width() - (padding * 2) - 50);
+        window_get_width() - (paddingText * 2) - (paddingBox * 2));
 
 } else {
 
     draw_sprite_ext(s_TextBox,
         0,
         window_get_width() / 2,
-        window_get_height() - boxSize - 25,
+        window_get_height() - boxSize - paddingBox,
         3,
         3,
         0,
@@ -116,11 +117,11 @@ if (textAtTop) {
 
     draw_set_color(c_white);
 
-    draw_text_ext(25 + padding,
-        window_get_height() - boxSize - 25 + padding,
+    draw_text_ext(paddingBox + paddingText,
+        window_get_height() - boxSize - paddingBox + paddingText,
         text,
         textLineSeperation,
-        window_get_width() - (padding * 2) - 50);
+        window_get_width() - (paddingText * 2) - (paddingBox*2));
 
 }
 </string>

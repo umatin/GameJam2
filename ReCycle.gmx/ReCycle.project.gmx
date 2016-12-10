@@ -3,11 +3,11 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
+  <datafiles number="2" name="datafiles">
     <datafile>
-      <name>Pixeled.ttf</name>
+      <name>default.ttf</name>
       <exists>-1</exists>
-      <size>16400</size>
+      <size>69748</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -19,7 +19,7 @@
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
-      <filename>Pixeled.ttf</filename>
+      <filename>default.ttf</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
