@@ -25,14 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//texture_set_interpolation(false);
-
-//image_xscale = 2;
-//image_yscale = 2;
-
-xCoord = self.x;
+            <string>xCoord = self.x;
 yCoord = self.y;
 
+
+texture_set_interpolation(false);
 </string>
           </argument>
         </arguments>
@@ -58,29 +55,6 @@ yCoord = self.y;
             <string>if(global.EButtonInstantiated == false){
     instance_create(window_get_width()/2, window_get_height()/2, o_EButton);
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>texture_set_interpolation(false);
 </string>
           </argument>
         </arguments>
