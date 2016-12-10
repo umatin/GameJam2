@@ -29,6 +29,10 @@
 
 image_xscale = 2;
 image_yscale = 2;
+
+xCoord = self.x;
+yCoord = self.y;
+
 </string>
           </argument>
         </arguments>
@@ -108,6 +112,36 @@ image_yscale = 2;
             <kind>1</kind>
             <string>if(global.EButtonInstantiated == true &amp;&amp; distance_to_object(o_TestCharacter) &gt; 8){
     with (o_EButton) instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.EButtonInstantiated == false &amp;&amp; distance_to_object(o_TestCharacter) &lt; 8){
+    
+    instance_create(
+        xCoord, 
+        yCoord, 
+        o_EButton);
+    
 }
 </string>
           </argument>
