@@ -37,7 +37,7 @@ global.PlayerChar = self;
 
 self.movementSpeed = 1.1;
 
-self.currentSpriteImage = 1;
+self.currentSpriteImage = 0;
 
 image_speed = 0;
 </string>
@@ -144,6 +144,15 @@ if (place_free(self.x + self.movementSpeed, self.y))
             <string>if (place_free(self.x - self.movementSpeed, self.y))
 {
     self.x -= self.movementSpeed;
+}
+
+if (self.currentSpriteImage != 0)
+{
+    self.currentSpriteImage = 0;
+}
+else if(self.currentSpriteImage != 1)
+{
+    self.currentSpriteImage = 1;
 }
 
 </string>
