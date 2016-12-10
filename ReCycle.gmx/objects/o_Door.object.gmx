@@ -51,6 +51,18 @@ self.collidingPlayer = false;
           <argument>
             <kind>1</kind>
             <string>room_goto(testingroom2);
+
+with (MainPlayer)
+{
+    x = 20;
+    y = 20;
+}
+
+with (Saman)
+{
+    x = 60;
+    y = 60;
+}
 </string>
           </argument>
         </arguments>
@@ -99,9 +111,6 @@ self.collidingPlayer = false;
             <string>image_index = self.img_ind;
 
 texture_set_interpolation(false);
-
-image_xscale = 3;
-image_yscale = 3;
 </string>
           </argument>
         </arguments>

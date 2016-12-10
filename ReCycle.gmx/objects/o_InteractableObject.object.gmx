@@ -81,9 +81,6 @@ yCoord = self.y;
           <argument>
             <kind>1</kind>
             <string>texture_set_interpolation(false);
-
-image_xscale = 3;
-image_yscale = 3;
 </string>
           </argument>
         </arguments>
