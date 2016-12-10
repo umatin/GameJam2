@@ -79,8 +79,8 @@ self.currentPath = path0;
             <string>destinX = path_get_point_x (self.currentPath,pathPoint);
 destinY = path_get_point_y (self.currentPath,pathPoint);
 
-show_debug_message(string(self.x) + " " + string(self.y));
-show_debug_message("Destin" + string(destinX) + " " + string(destinY));
+//show_debug_message(string(self.x) + " " + string(self.y));
+//show_debug_message("Destin" + string(destinX) + " " + string(destinY));
 
 
 if !(self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1)
