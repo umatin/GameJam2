@@ -10,13 +10,18 @@ with(Maddin)
 {
     x = 128;
     y = 160;
+    
     timeline_index = timeline1;
     timeline_position = 0;
     timeline_running = true;
     timeline_loop = false;
+    
+    currentRoom = Wohnzimmer;
 }
 
-transition_kind = 20;
-transition_steps = 150;
-
 room_goto(StartZimmer);
+
+if (global.hasKey == true && global.Level == 1)
+{
+    global.Level = 2;
+}

@@ -257,12 +257,12 @@ else
     timeBlocked = 0;
 }
 
-if(timeBlocked &gt; 5000)
+if(timeBlocked &gt; 50)
 {
     timeline_running = true;
 }
 
-show_debug_message(string(global.hasKey));
+//show_debug_message(string(global.hasKey));
 
 
 

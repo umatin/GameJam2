@@ -19,13 +19,18 @@
 }
 
 global.hasKey = false;
-global.keyExists = true;</code>
+global.keyExists = true;
+
+global.Level = 2;
+
+global.hasCaffee = false;
+global.hasGivenCaffee = false;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>992</w>
+    <w>920</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -36,8 +41,8 @@ global.keyExists = true;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-13</xoffset>
-    <yoffset>105</yoffset>
+    <xoffset>-23</xoffset>
+    <yoffset>-110</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="StartRoom2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -69,6 +74,7 @@ global.keyExists = true;</code>
     <instance objName="o_HelperObject" x="534" y="31" name="inst_B90BB00E" locked="0" code="" scaleX="1" scaleY="25" colour="4294967295" rotation="0"/>
     <instance objName="o_HelperObject" x="58" y="395" name="inst_6DE94D39" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_HelperObject" x="60" y="122" name="inst_5686345B" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_caffee" x="256" y="224" name="inst_9C2D54EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

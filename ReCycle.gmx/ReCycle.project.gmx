@@ -96,6 +96,7 @@
       <object>objects\o_Fenster</object>
     </objects>
     <object>objects\o_Key</object>
+    <object>objects\o_caffee</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
