@@ -25,7 +25,7 @@ global.keyExists = true;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>968</w>
+    <w>992</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -36,8 +36,8 @@ global.keyExists = true;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-279</xoffset>
-    <yoffset>-61</yoffset>
+    <xoffset>-13</xoffset>
+    <yoffset>105</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="StartRoom2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>

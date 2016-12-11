@@ -25,32 +25,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (point_distance(Maddin.x, Maddin.y , MainCharacter.x, MainCharacter.y) &lt; 8)
+            <string>
+
+if (global.hasKey == true &amp;&amp; distance_to_object(Maddin) &lt; 10)
 {
-    show_debug_message("met");
-    if (global.hasKey == true)
-    {
-        show_debug_message("heeeeelllooooo");
-        inst = instance_create(0,0,o_TextBox);
-        inst.text = "Oh danke, für den schlüssel";
-    
-        global.hasKey = false;
-        if (Maddin.currentRoom == Wohnzimmer)
-        {
-            timeline_index = tl_noKey;
-            timeline_position = 0;
-            timeline_running = true;
-            timeline_loop = false;
-        }
-        else if (Maddin.currentRoom == Kueche)
-        {
-            timeline_index = tl_noKey;
-            timeline_position = 600;
-            timeline_running = true;
-            timeline_loop = false;
-        }
-    }
+     inst = instance_create(0,0,o_TextBox);
+     inst.text = "Oh danke, für den schlüssel";
+ 
+     global.hasKey = false;
+     if (Maddin.currentRoom == Wohnzimmer)
+     {
+        show_debug_message("Wohnzimmer");
+         timeline_index = tl_noKey;
+         timeline_position = 0;
+         timeline_running = true;
+         timeline_loop = false;
+     }
+     else if (Maddin.currentRoom == Kueche)
+     {
+         timeline_index = tl_noKey;
+         timeline_position = 645;
+         timeline_running = true;
+         timeline_loop = false;
+         show_debug_message("Kueche");
+     }
 }
+
 </string>
           </argument>
         </arguments>

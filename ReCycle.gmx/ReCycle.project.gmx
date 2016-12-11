@@ -57,6 +57,9 @@
     <path>paths\path2</path>
     <path>paths\path3</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\Reset.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\f_Default</font>
   </fonts>
@@ -96,6 +99,7 @@
       <room>rooms\Wohnzimmer</room>
       <room>rooms\Kueche</room>
       <room>rooms\Treppenhaus</room>
+      <room>rooms\room7</room>
     </rooms>
     <room>rooms\TestingRoom</room>
     <room>rooms\testingroom2</room>
