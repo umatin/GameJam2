@@ -68,6 +68,7 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\Reset.gml</script>
+    <script>scripts\makeZ.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_Default</font>

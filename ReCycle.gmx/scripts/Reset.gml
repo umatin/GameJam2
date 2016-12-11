@@ -10,8 +10,8 @@ with(MainCharacter)
 }
 with(Maddin)
 {
-    x = 128;
-    y = 160;
+    x = 256;
+    y = 256;
     
     timeline_index = timeline1;
     timeline_position = 0;

@@ -25,7 +25,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>inst.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sagittis lorem. Etiam a nunc mi.";
+            <string>
+if (global.Level == 1 &amp;&amp; !hasKey )
+{
+    inst.text = "Mädchen bei Unfall auf Fahrrrad umgekommen";
+}
+
+if (global.Level == 1 &amp;&amp; hasKey )
+{
+    inst.text = "Mädchen bei Unfall im BUS umgekommen";
+}
+
+if (global.Level == 2 &amp;&amp; !hasGivenCaffee )
+{
+    inst.text = "Mädchen bei Unfall im BUS umgekommen";
+}
+
+if (global.Level == 2 &amp;&amp; hasGivenCaffee )
+{
+    inst.text = "Mädchen bei Unfall im beim Schulweg Überfahren umgekommen";
+}
 </string>
           </argument>
         </arguments>

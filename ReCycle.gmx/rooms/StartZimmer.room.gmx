@@ -30,7 +30,7 @@ global.hasGivenCaffee = false;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>920</w>
+    <w>976</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -41,8 +41,8 @@ global.hasGivenCaffee = false;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-23</xoffset>
-    <yoffset>-110</yoffset>
+    <xoffset>-66</xoffset>
+    <yoffset>65</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="StartRoom2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -66,7 +66,7 @@ global.hasGivenCaffee = false;</code>
   </views>
   <instances>
     <instance objName="o_MainChar" x="75" y="199" name="MainCharacter" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="o_AiCharacter" x="128" y="160" name="Maddin" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="o_AiCharacter" x="256" y="256" name="Maddin" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="o_DoorStartZimmer" x="512" y="224" name="inst_E5AB02AE" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="sprite_bed" x="64" y="192" name="i_Bett" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="sprite_decke" x="64" y="192" name="inst_28AFD371" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
