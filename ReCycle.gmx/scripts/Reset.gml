@@ -1,3 +1,5 @@
+room_goto(StartZimmer);
+
 global.hasKey = false;
 global.keyExists = false;
 
@@ -19,7 +21,7 @@ with(Maddin)
     currentRoom = Wohnzimmer;
 }
 
-room_goto(StartZimmer);
+
 
 if (global.hasKey == true && global.Level == 1)
 {
