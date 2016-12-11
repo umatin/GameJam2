@@ -21,6 +21,7 @@
             <kind>1</kind>
             <string>with (o_AiCharacter)
 {
+    visible = false;
     charMoving = true;
     pathPoint = 0;
     currentRoom = Wohnzimmer;
@@ -58,6 +59,7 @@ show_debug_message("100");
             <kind>1</kind>
             <string>with (o_AiCharacter)
 {
+    visible = false;
     charMoving = true;
     pathPoint = 0;
     currentRoom = Kueche;

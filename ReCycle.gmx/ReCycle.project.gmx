@@ -35,6 +35,7 @@
     <sprites name="DEBUG">
       <sprite>sprites\s_TreppeDEBUG</sprite>
       <sprite>sprites\s_Sprite0</sprite>
+      <sprite>sprites\sprite14</sprite>
       <sprite>sprites\s_Object</sprite>
       <sprite>sprites\s_TestChar2</sprite>
       <sprite>sprites\s_Door</sprite>

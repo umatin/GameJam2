@@ -30,7 +30,7 @@
 with (MainCharacter)
 {
     y = 220;
-    x = 20;
+    x = 90;
     
 }
 </string>
