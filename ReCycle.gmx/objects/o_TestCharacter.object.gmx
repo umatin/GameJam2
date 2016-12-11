@@ -212,7 +212,7 @@ persistent = true;
             <string>if (global.textBoxInstantiated == false) {
 
     if (place_free(self.x - self.movementSpeed, self.y)) {
-    
+        
         self.x -= self.movementSpeed;
         
         if (current_time - old_time &gt; 200) {

@@ -105,7 +105,6 @@
     <object>objects\o_Bed</object>
     <object>objects\o_Table</object>
     <object>objects\o_Homework</object>
-    <object>objects\o_KaffeeM</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
