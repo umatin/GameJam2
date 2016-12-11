@@ -52,10 +52,7 @@ texture_set_interpolation(false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.EButtonInstantiated == false){
-    instance_create(window_get_width()/2, window_get_height()/2, o_EButton);
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -132,14 +129,14 @@ texture_set_interpolation(false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.EButtonInstantiated == false &amp;&amp; distance_to_object(o_TestCharacter) &lt; 8){
+            <string>/*if(global.EButtonInstantiated == false &amp;&amp; distance_to_object(o_TestCharacter) &lt; 8){
     
     instance_create(
         xCoord, 
         yCoord, 
         o_EButton);
     
-}
+}*/
 </string>
           </argument>
         </arguments>

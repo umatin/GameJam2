@@ -42,6 +42,11 @@
     </sprites>
     <sprite>sprites\Helper</sprite>
     <sprite>sprites\s_Treppe</sprite>
+    <sprite>sprites\s_staris_up</sprite>
+    <sprite>sprites\s_Key</sprite>
+    <sprite>sprites\sprite17</sprite>
+    <sprite>sprites\sprite18</sprite>
+    <sprite>sprites\sprite19</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\StartRoom2</background>
@@ -52,6 +57,7 @@
   <paths name="paths">
     <path>paths\path0</path>
     <path>paths\path1</path>
+    <path>paths\path2</path>
   </paths>
   <fonts name="fonts">
     <font>fonts\f_Default</font>
@@ -78,9 +84,12 @@
       <object>objects\o_TreppeNachUnten</object>
       <object>objects\o_TreppeNachOben</object>
     </objects>
+    <object>objects\o_Key</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
+    <timeline>timelines\tl_hasKey</timeline>
+    <timeline>timelines\tl_noKey</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>

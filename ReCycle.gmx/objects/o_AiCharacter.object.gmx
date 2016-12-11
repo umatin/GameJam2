@@ -53,6 +53,9 @@ persistent = true;
 self.currentRoom = Wohnzimmer;
 
 visible = false;
+
+self.xVar = x;
+self.yVar = y;
 </string>
           </argument>
         </arguments>
@@ -75,138 +78,147 @@ visible = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (currentRoom == room)
+            <string>destinX = path_get_point_x (self.currentPath,pathPoint);
+destinY = path_get_point_y (self.currentPath,pathPoint);
+
+//show_debug_message(string(self.x) + " " + string(self.y));
+//show_debug_message("Destin" + string(destinX) + " " + string(destinY));
+
+
+if !(xVar &gt; destinX - 1 &amp;&amp; xVar &lt; destinX + 1)
 {
-    visible = true;
-    
-    destinX = path_get_point_x (self.currentPath,pathPoint);
-    destinY = path_get_point_y (self.currentPath,pathPoint);
-    
-    show_debug_message(string(self.x) + " " + string(self.y));
-    show_debug_message("Destin" + string(destinX) + " " + string(destinY));
-    
-    
-    if !(self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1)
+    if (xVar &lt; destinX)
     {
-        if (self.x &lt; destinX)
-        {
-            self.charDirection = 3;
-        }
-        else if (self.x &gt; destinX)
-        {
-            self.charDirection = 1;
-        }
+        self.charDirection = 3;
     }
-    else if !(self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1)
+    else if (xVar &gt; destinX)
     {
-        if (self.y &lt; destinY)
-        {
-            self.charDirection = 2;
-        }
-        else if (self.y &gt; destinY)
-        {
-            self.charDirection = 0;
-        }
+        self.charDirection = 1;
     }
-    
-    if ((self.x &gt; destinX - 1 &amp;&amp; self.x &lt; destinX + 1) &amp;&amp; (self.y &gt; destinY - 1 &amp;&amp; self.y &lt; destinY + 1))
+}
+else if !(yVar &gt; destinY - 1 &amp;&amp; yVar &lt; destinY + 1)
+{
+    if (yVar &lt; destinY)
     {
-        pathPoint ++;
+        self.charDirection = 2;
     }
-    
-    if (path_get_number(self.currentPath) == pathPoint)
+    else if (yVar &gt; destinY)
     {
-        self.charMoving = false;
+        self.charDirection = 0;
     }
-    
-    
-    if (self.charMoving == true)
+}
+
+if ((self.xVar &gt; destinX - 1 &amp;&amp; self.xVar &lt; destinX + 1) &amp;&amp; (self.yVar &gt; destinY - 1 &amp;&amp; self.yVar &lt; destinY + 1))
+{
+    pathPoint ++;
+}
+
+if (path_get_number(self.currentPath) == pathPoint)
+{
+    self.charMoving = false;
+}
+
+
+if (self.charMoving == true)
+{
+    if (self.charDirection == 1)
     {
-        if (self.charDirection == 1)
+        if (place_free(self.xVar - self.movementSpeed, self.yVar) || !(currentRoom == room))
         {
-            if (place_free(self.x - self.movementSpeed, self.y))
+            self.xVar -= self.movementSpeed;
+            
+            if (current_time - old_time &gt; 300)
             {
-                self.x -= self.movementSpeed;
-                
-                if (current_time - old_time &gt; 300)
+                if (self.currentSpriteImage != 8)
                 {
-                    if (self.currentSpriteImage != 8)
-                    {
-                        self.currentSpriteImage = 8;
-                    }
-                    else if(self.currentSpriteImage != 9)
-                    {
-                        self.currentSpriteImage = 9;
-                    }
-                    self.old_time = current_time;
+                    self.currentSpriteImage = 8;
                 }
+                else if(self.currentSpriteImage != 9)
+                {
+                    self.currentSpriteImage = 9;
+                }
+                self.old_time = current_time;
             }
         }
-        if (self.charDirection == 3)
+    }
+    if (self.charDirection == 3)
+    {
+        if (place_free(self.xVar + self.movementSpeed, self.yVar) || !(currentRoom == room))
         {
-            if (place_free(self.x + self.movementSpeed, self.y))
+            self.xVar += self.movementSpeed;
+            
+            if (current_time - old_time &gt; 300)
             {
-                self.x += self.movementSpeed;
-                
-                if (current_time - old_time &gt; 300)
+                if (self.currentSpriteImage != 3)
                 {
-                    if (self.currentSpriteImage != 3)
-                    {
-                        self.currentSpriteImage = 3;
-                    }
-                    else if(self.currentSpriteImage != 4)
-                    {
-                        self.currentSpriteImage = 4;
-                    }
-                    self.old_time = current_time;
+                    self.currentSpriteImage = 3;
                 }
+                else if(self.currentSpriteImage != 4)
+                {
+                    self.currentSpriteImage = 4;
+                }
+                self.old_time = current_time;
             }
         }
-        
-        if (self.charDirection == 2)
+    }
+    
+    if (self.charDirection == 2)
+    {
+        if (place_free( self.xVar, self.yVar + self.movementSpeed) || !(currentRoom == room))
         {
-            if (place_free( self.x, self.y + self.movementSpeed))
+            self.yVar += self.movementSpeed;
+            if (current_time - old_time &gt; 300)
             {
-                self.y += self.movementSpeed;
-                if (current_time - old_time &gt; 300)
+                if (self.currentSpriteImage != 0)
                 {
-                    if (self.currentSpriteImage != 0)
-                    {
-                        self.currentSpriteImage = 0;
-                    }
-                    else if(self.currentSpriteImage != 5)
-                    {
-                        self.currentSpriteImage = 5;
-                    }
-                    self.old_time = current_time;
+                    self.currentSpriteImage = 0;
                 }
+                else if(self.currentSpriteImage != 5)
+                {
+                    self.currentSpriteImage = 5;
+                }
+                self.old_time = current_time;
             }
         }
-        
-        if (self.charDirection == 0)
+    }
+    
+    if (self.charDirection == 0)
+    {
+        if (place_free(self.xVar, self.yVar - self.movementSpeed) || !(currentRoom == room))
         {
-            if (place_free(self.x, self.y - self.movementSpeed))
+            self.yVar -= self.movementSpeed;
+            if (current_time - old_time &gt; 300)
             {
-                self.y -= self.movementSpeed;
-                if (current_time - old_time &gt; 300)
+                if (self.currentSpriteImage != 1)
                 {
-                    if (self.currentSpriteImage != 1)
-                    {
-                        self.currentSpriteImage = 1;
-                    }
-                    else if(self.currentSpriteImage != 6)
-                    {
-                        self.currentSpriteImage = 6;
-                    }
-                    self.old_time = current_time;
+                    self.currentSpriteImage = 1;
                 }
+                else if(self.currentSpriteImage != 6)
+                {
+                    self.currentSpriteImage = 6;
+                }
+                self.old_time = current_time;
             }
         }
     }
 }
+
+if (currentRoom == room)
+{
+
+    visible = true;
+    
+    y = yVar;
+    x = xVar;
+    
+
+}
 else
 {
     visible = false;
+    
+    x = -100;
+    y = -100;
 }
 
 

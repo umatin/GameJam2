@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (distance_to_object(o_TestCharacter) &lt; 8)
+            <string>if (distance_to_object(o_TestCharacter) &lt; 6)
 {
     event_user(0);
 }

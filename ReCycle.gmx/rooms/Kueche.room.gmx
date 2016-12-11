@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>976</w>
+    <w>888</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-74</xoffset>
-    <yoffset>-1</yoffset>
+    <xoffset>20</xoffset>
+    <yoffset>-4</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="StartRoom12" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -51,13 +51,14 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="o_TreppeNachOben" x="224" y="160" name="inst_D4723D01" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="o_DoorKueche" x="0" y="192" name="inst_26EE8436" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="Zeitung" x="416" y="288" name="inst_FA522506" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="o_TreppeNachOben" x="288" y="64" name="inst_D4723D01" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="o_DoorKueche" x="32" y="224" name="inst_26EE8436" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="Zeitung" x="64" y="320" name="inst_FA522506" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="o_HelperObject" x="48" y="-3" name="inst_6D947B81" locked="0" code="" scaleX="1" scaleY="30" colour="4294967295" rotation="0"/>
     <instance objName="o_HelperObject" x="534" y="-3" name="inst_9EF7C50A" locked="0" code="" scaleX="1" scaleY="30" colour="4294967295" rotation="0"/>
     <instance objName="o_HelperObject" x="56" y="395" name="inst_3D9CAB45" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_HelperObject" x="56" y="120" name="inst_6900EC94" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_HelperObject" x="267" y="103" name="inst_FEAEB706" locked="0" code="" scaleX="6" scaleY="6" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

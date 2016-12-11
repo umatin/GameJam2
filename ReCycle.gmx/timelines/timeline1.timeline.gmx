@@ -26,9 +26,7 @@
     pathPoint = 0;
     currentRoom = Wohnzimmer;
     currentPath = path0;
-    
-    y = 100;
-    x = 100;
+
 }
 
 show_debug_message("100");
@@ -39,7 +37,7 @@ show_debug_message("100");
     </event>
   </entry>
   <entry>
-    <step>1600</step>
+    <step>1400</step>
     <event>
       <action>
         <libid>1</libid>
@@ -62,13 +60,58 @@ show_debug_message("100");
     visible = false;
     charMoving = true;
     pathPoint = 0;
-    currentRoom = Kueche;
+    currentRoom = Wohnzimmer;
     currentPath = path1;
-    y = 220;
-    x = 20;
 }
 
 show_debug_message("1600");
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1600</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.hasKey == true)
+{
+    with (Maddin)
+    {
+        timeline_index = tl_hasKey;
+        timeline_position = 0;
+        timeline_running = true;
+        timeline_loop = false;
+    }
+}
+else 
+{
+    with (Maddin)
+    {
+        timeline_index = tl_noKey;
+        timeline_position = 0;
+        timeline_running = true;
+        timeline_loop = false;
+    }
+}
+
+
 </string>
           </argument>
         </arguments>
