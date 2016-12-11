@@ -50,12 +50,14 @@
     <background>background\Start</background>
     <background>background\StartRoom1</background>
     <background>background\StartRoom12</background>
+    <background>background\Kitchen</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
     <path>paths\path1</path>
     <path>paths\path2</path>
     <path>paths\path3</path>
+    <path>paths\path4</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\Reset.gml</script>
@@ -78,6 +80,8 @@
     <objects name="Doors">
       <object>objects\o_DoorStartZimmer</object>
       <object>objects\o_DoorKueche</object>
+      <object>objects\o_DoorRealKitchen</object>
+      <object>objects\o_DoorKueche2</object>
       <object>objects\o_DoorWohnzimmer</object>
       <object>objects\o_DoorTreppenhaus</object>
       <object>objects\o_Door</object>
@@ -85,12 +89,15 @@
       <object>objects\o_TreppeNachUnten</object>
       <object>objects\o_TreppeNachOben</object>
     </objects>
+    <objects name="TextTriggers">
+      <object>objects\o_Fenster</object>
+    </objects>
     <object>objects\o_Key</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
-    <timeline>timelines\tl_hasKey</timeline>
     <timeline>timelines\tl_noKey</timeline>
+    <timeline>timelines\tl_hasKey</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
@@ -99,7 +106,7 @@
       <room>rooms\Wohnzimmer</room>
       <room>rooms\Kueche</room>
       <room>rooms\Treppenhaus</room>
-      <room>rooms\room7</room>
+      <room>rooms\RealKitchen</room>
     </rooms>
     <room>rooms\TestingRoom</room>
     <room>rooms\testingroom2</room>

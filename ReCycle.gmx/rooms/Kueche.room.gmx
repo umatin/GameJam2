@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>888</w>
+    <w>1016</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -59,6 +59,7 @@
     <instance objName="o_HelperObject" x="56" y="395" name="inst_3D9CAB45" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_HelperObject" x="56" y="120" name="inst_6900EC94" locked="0" code="" scaleX="30" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_HelperObject" x="267" y="103" name="inst_FEAEB706" locked="0" code="" scaleX="6" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="o_DoorKueche2" x="512" y="224" name="inst_4D4D97DC" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
