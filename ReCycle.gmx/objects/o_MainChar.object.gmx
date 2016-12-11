@@ -29,13 +29,12 @@
 
 if (global.hasKey == true &amp;&amp; distance_to_object(Maddin) &lt; 10)
 {
-     inst = instance_create(0,0,o_TextBox);
-     inst.text = "Oh danke, für den schlüssel";
- 
      global.hasKey = false;
      if (Maddin.currentRoom == Wohnzimmer)
      {
-        show_debug_message("Wohnzimmer");
+         global.hasKey = false;
+         inst = instance_create(0,0,o_TextBox);
+         inst.text = "Oh danke, für den schlüssel";
          timeline_index = tl_noKey;
          timeline_position = 0;
          timeline_running = true;
@@ -44,10 +43,12 @@ if (global.hasKey == true &amp;&amp; distance_to_object(Maddin) &lt; 10)
      else if (Maddin.currentRoom == Kueche)
      {
          timeline_index = tl_noKey;
-         timeline_position = 645;
+         timeline_position = 425;
          timeline_running = true;
          timeline_loop = false;
-         show_debug_message("Kueche");
+         global.hasKey = false;
+         inst = instance_create(0,0,o_TextBox);
+         inst.text = "Oh danke, für den schlüssel";
      }
 }
 

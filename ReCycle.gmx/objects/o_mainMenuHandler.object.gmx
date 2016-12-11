@@ -28,6 +28,7 @@
             <string>fade_ready = false; 
 fade_amount = 0.01; //or whatever you'd like. This will be the amount added each update
 fade_alpha = 0;
+sound = audio_play_sound(TitleTheme, 1, true);
 </string>
           </argument>
         </arguments>
@@ -52,10 +53,14 @@ fade_alpha = 0;
             <kind>1</kind>
             <string>if( fade_ready == true )
 {
+    
     draw_set_color(c_black);
     draw_set_alpha(fade_alpha);
     draw_rectangle(0,0,800,600, false);
     fade_alpha += fade_amount;
+    
+    
+    
     
     if( fade_alpha &gt; 1 )
     {
@@ -85,6 +90,8 @@ fade_alpha = 0;
           <argument>
             <kind>1</kind>
             <string>fade_ready = true;
+
+audio_sound_gain(sound, -1, 11000);
 </string>
           </argument>
         </arguments>

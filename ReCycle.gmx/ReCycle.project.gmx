@@ -23,7 +23,9 @@
     </datafile>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\TitleTheme</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\SpritesheetTest</sprite>
     <sprite>sprites\s_MainChar</sprite>
@@ -44,6 +46,7 @@
     <sprite>sprites\s_Treppe</sprite>
     <sprite>sprites\s_staris_up</sprite>
     <sprite>sprites\s_Key</sprite>
+    <sprite>sprites\s_tochter</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\StartRoom2</background>
