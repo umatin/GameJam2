@@ -1,8 +1,5 @@
 room_goto(StartZimmer);
 
-global.hasKey = false;
-global.keyExists = false;
-
 with(MainCharacter)
 {
     x = 75;
@@ -21,9 +18,18 @@ with(Maddin)
     currentRoom = Wohnzimmer;
 }
 
+show_debug_message("Out " + string(global.hasKey));
 
-
-if (global.hasKey == true && global.Level == 1)
+if (global.hasKey && global.Level == 1)
 {
     global.Level = 2;
 }
+
+if (global.hasGivenCaffee && global.Level == 2)
+{
+    global.Level = 3;
+}
+
+
+global.hasKey = false;
+global.keyExists = true;

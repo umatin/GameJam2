@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.Level &lt; 2)
+            <string>if (global.Level == 1)
 {
     instance_destroy();
 }

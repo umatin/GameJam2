@@ -28,13 +28,15 @@ global.hasGivenCaffee = false;
 
 global.hasHomework = false;
 
-global.hausiLiegen = true;</code>
+global.hausiLiegen = true;
+
+audio_play_sound(PLAYING, 1, true);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>968</w>
+    <w>872</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -45,8 +47,8 @@ global.hausiLiegen = true;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-79</xoffset>
-    <yoffset>16</yoffset>
+    <xoffset>-30</xoffset>
+    <yoffset>-34</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="StartRoom2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>

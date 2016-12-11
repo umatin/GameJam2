@@ -24,7 +24,9 @@
   </datafiles>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\TitleTheme</sound>
+    <sound>sound\Ending</sound>
+    <sound>sound\PLAYING</sound>
+    <sound>sound\Title</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\SpritesheetTest</sprite>
@@ -69,7 +71,6 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\Reset.gml</script>
-    <script>scripts\makeZ.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_Default</font>

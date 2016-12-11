@@ -28,7 +28,7 @@
             <string>fade_ready = false; 
 fade_amount = 0.01; //or whatever you'd like. This will be the amount added each update
 fade_alpha = 0;
-sound = audio_play_sound(TitleTheme, 1, true);
+sound = audio_play_sound(Title, 1, true);
 </string>
           </argument>
         </arguments>

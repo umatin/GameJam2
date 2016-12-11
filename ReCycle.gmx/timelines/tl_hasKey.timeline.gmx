@@ -252,7 +252,7 @@ if (room == RealKitchen || room == Kueche)
     x = -6000;
 }
 
-Reset();
+instance_create(450,225,Zeitung);
 </string>
           </argument>
         </arguments>
