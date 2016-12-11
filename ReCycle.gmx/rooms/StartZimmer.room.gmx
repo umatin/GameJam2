@@ -7,7 +7,7 @@
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>with (Maddin)
@@ -21,16 +21,20 @@
 global.hasKey = false;
 global.keyExists = true;
 
-global.Level = 2;
+global.Level = 1;
 
 global.hasCaffee = false;
-global.hasGivenCaffee = false;</code>
+global.hasGivenCaffee = false;
+
+global.hasHomework = false;
+
+global.hausiLiegen = true;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
-  <clearDisplayBuffer>-1</clearDisplayBuffer>
+  <clearDisplayBuffer>0</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
+    <w>968</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -41,8 +45,8 @@ global.hasGivenCaffee = false;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-66</xoffset>
-    <yoffset>65</yoffset>
+    <xoffset>-79</xoffset>
+    <yoffset>16</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="StartRoom2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>

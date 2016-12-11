@@ -65,6 +65,7 @@
     <path>paths\path2</path>
     <path>paths\path3</path>
     <path>paths\path4</path>
+    <path>paths\HausP</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\Reset.gml</script>
