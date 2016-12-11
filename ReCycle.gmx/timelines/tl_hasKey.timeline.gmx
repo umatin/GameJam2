@@ -19,10 +19,110 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (room == Wohnzimmer)
+            <string>show_debug_message("Wo is mein SChluessel?");
+if (room == Wohnzimmer)
 {
     inst = instance_create(0,0, o_TextBox);
     inst.text = "Wo zur Hölle sind meine Schlüssel????";
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>130</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with (o_AiCharacter)
+{
+    charMoving = true;
+    pathPoint = 0;
+    currentRoom = Wohnzimmer;
+    currentPath = path2;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>600</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with (o_AiCharacter)
+{
+    xVar = 64;
+    yVar = 220;
+    charMoving = true;
+    pathPoint = 0;
+    currentRoom = Kueche;
+    currentPath = path3;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>1200</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with (o_AiCharacter)
+{
+    currentRoom = TestingRoom;
+    visible = false;
+    charMoving = false;
+    y = -6000;
+    x = -6000;
 }
 </string>
           </argument>

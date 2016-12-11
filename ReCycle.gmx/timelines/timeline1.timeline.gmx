@@ -29,7 +29,7 @@
 
 }
 
-show_debug_message("100");
+
 </string>
           </argument>
         </arguments>
@@ -92,6 +92,7 @@ show_debug_message("1600");
             <kind>1</kind>
             <string>if (global.hasKey == true)
 {
+    show_debug_message("has Key");
     with (Maddin)
     {
         timeline_index = tl_hasKey;
@@ -102,6 +103,7 @@ show_debug_message("1600");
 }
 else 
 {
+    show_debug_message("No Key");
     with (Maddin)
     {
         timeline_index = tl_noKey;

@@ -56,6 +56,8 @@ visible = false;
 
 self.xVar = x;
 self.yVar = y;
+
+self.timeBlocked = 0;
 </string>
           </argument>
         </arguments>
@@ -125,6 +127,7 @@ if (self.charMoving == true)
     {
         if (place_free(self.xVar - self.movementSpeed, self.yVar) || !(currentRoom == room))
         {
+            timeline_running = true;
             self.xVar -= self.movementSpeed;
             
             if (current_time - old_time &gt; 300)
@@ -140,11 +143,16 @@ if (self.charMoving == true)
                 self.old_time = current_time;
             }
         }
+        else 
+        {
+            timeline_running = false;
+        }
     }
     if (self.charDirection == 3)
     {
         if (place_free(self.xVar + self.movementSpeed, self.yVar) || !(currentRoom == room))
         {
+            timeline_running = true;
             self.xVar += self.movementSpeed;
             
             if (current_time - old_time &gt; 300)
@@ -160,12 +168,18 @@ if (self.charMoving == true)
                 self.old_time = current_time;
             }
         }
+        else 
+        {
+            timeline_running = false;
+        }
+
     }
     
     if (self.charDirection == 2)
     {
         if (place_free( self.xVar, self.yVar + self.movementSpeed) || !(currentRoom == room))
         {
+            timeline_running = true;
             self.yVar += self.movementSpeed;
             if (current_time - old_time &gt; 300)
             {
@@ -180,12 +194,17 @@ if (self.charMoving == true)
                 self.old_time = current_time;
             }
         }
+        else 
+        {
+            timeline_running = false;
+        }
     }
     
     if (self.charDirection == 0)
     {
         if (place_free(self.xVar, self.yVar - self.movementSpeed) || !(currentRoom == room))
         {
+            timeline_running = true;
             self.yVar -= self.movementSpeed;
             if (current_time - old_time &gt; 300)
             {
@@ -200,7 +219,15 @@ if (self.charMoving == true)
                 self.old_time = current_time;
             }
         }
+        else 
+        {
+            timeline_running = false;
+        }
     }
+}
+else 
+{
+    timeline_running = true;
 }
 
 if (currentRoom == room)
@@ -210,16 +237,32 @@ if (currentRoom == room)
     
     y = yVar;
     x = xVar;
-    
-
 }
 else
 {
+    timeline_running = true;
+    
     visible = false;
     
     x = -100;
     y = -100;
 }
+
+if (!timeline_running)
+{
+    timeBlocked += 1;
+}
+else 
+{
+    timeBlocked = 0;
+}
+
+if(timeBlocked &gt; 5000)
+{
+    timeline_running = true;
+}
+
+show_debug_message(string(timeline_running));
 
 
 
