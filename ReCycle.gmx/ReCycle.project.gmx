@@ -47,6 +47,9 @@
     <sprite>sprites\s_staris_up</sprite>
     <sprite>sprites\s_Key</sprite>
     <sprite>sprites\s_tochter</sprite>
+    <sprite>sprites\s_Bed</sprite>
+    <sprite>sprites\s_Table</sprite>
+    <sprite>sprites\s_Homework</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\StartRoom2</background>
@@ -97,6 +100,9 @@
     </objects>
     <object>objects\o_Key</object>
     <object>objects\o_caffee</object>
+    <object>objects\o_Bed</object>
+    <object>objects\o_Table</object>
+    <object>objects\o_Homework</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline1</timeline>
